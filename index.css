@@ -5,26 +5,26 @@ html, body {
   height: 100%;
 }
 
-h3 {
+footer h3 {
   text-align: center;
   font-size: 2em;
 }
 
-li {
+footer li {
   list-style-type: none;
 }
 
-a {
+footer a {
   text-decoration: none;
   color: black;
 }
 
-p {
+footer p {
   font-size: 1.5em;
   text-align: center;
 }
 
-.row {
+footer .row {
   margin-left: 0;
   margin-right: 0;
 }
@@ -58,7 +58,7 @@ p {
 }
 
 #inner {
-    /*width: 50%;*/
-    /*margin: 0 auto;*/
+    width: 50%;
+    margin: 0 auto;
     font-size: 1.5em;
 }
