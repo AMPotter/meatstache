@@ -11,6 +11,8 @@ $color-4: rgb(203,184,163);
 $color-5: rgb(212,56,56);*/
 
 .news {
+  padding-top: 2em;
+  padding-bottom: 2em;
   font-family: 'Open Sans', sans-serif;
   background-color: rgb(129,126,89);
 }
@@ -37,7 +39,7 @@ $color-5: rgb(212,56,56);*/
   color: rgba(255, 255, 255, .95);
 }
 
-.news__article-source>a {
+.news a {
   font-family: inherit;
   font-weight: inherit;
   font-size: inherit;
@@ -46,7 +48,7 @@ $color-5: rgb(212,56,56);*/
 
 .news__article-headline {
   font-style: italic;
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-family: 'Open Sans', sans-serif;
   color: rgb(212,56,56);
 }
