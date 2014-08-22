@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+
+footer h3 {
+  text-align: center;
+  font-size: 2em;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+footer p {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+footer .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.footer {
+  border: 2px solid;
+  margin-bottom: 0;
+  min-height: 100%;
+  position: absolute;
+  padding-left: 0;
+  width: 100%;
+}
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+.page-wrap:after {
+  /* .push must be the same height as footer */
+  height: 142px;
+}
+.footer {
+  background-url: http://api.thumbr.it/whitenoise-361x370.png?background=4ea6caff&noise=626262&density=15&opacity=15;
+  background: rgb(203,184,163);
+}
+
+#inner {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.5em;
+}
