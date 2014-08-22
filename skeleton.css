@@ -69,6 +69,24 @@
     .container .offset-by-fourteen              { padding-left: 840px; }
     .container .offset-by-fifteen               { padding-left: 900px; }
 
+/*Tweaks specific to meatstache put down here by Jason */
+
+
+.news__article {
+  margin-left: 180px;  /*skeleton-ish offset-by-three; needs responsiveness*/
+  width: 600px;  /*skeleton-ish width: ten columns. needs responsiveness*/
+}
+
+.news__article-source {
+  margin-top: 0.3333333em;
+}
+
+.news__article-image {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/*End Jason's Tweaks*/
 
 
 /* #Tablet (Portrait)
@@ -121,6 +139,18 @@
         .container .offset-by-thirteen              { padding-left: 624px; }
         .container .offset-by-fourteen              { padding-left: 672px; }
         .container .offset-by-fifteen               { padding-left: 720px; }
+
+        /*Jason's tweaks down here*/
+          .news__article {
+            margin-left: 160px;  /*skeleton-ish offset-by-three; */
+            width: 485px;  /*skeleton-ish width: ten columns. */
+          }
+
+          .news__article-image {
+            margin-top: 5em;
+          }
+        /*End Jason's tweaks */
+
     }
 
 
@@ -171,6 +201,17 @@
         .container .offset-by-fourteen,
         .container .offset-by-fifteen { padding-left: 0; }
 
+
+        /*Jason's tweaks*/
+        .news__article {
+            border-style: none;
+            margin-left: 0px;
+            width: 300px;  /*skeleton-ish width: ten columns. */
+        }
+        .news__article-image {
+            margin-top: 0em;
+        }
+        /*End Jason's tweaks*/
     }
 
 
@@ -203,6 +244,12 @@
         .container .sixteen.columns,
         .container .one-third.column,
         .container .two-thirds.column { width: 420px; }
+
+        /*Jason's tweaks*/
+        .news__article {
+            width: 420px;  /*skeleton-ish width: ten columns. */
+        }
+        /*End Jason's tweaks*/
     }
 
 
