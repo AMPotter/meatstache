@@ -7,8 +7,8 @@ html, body {
 
 nav ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding: auto;
   overflow: hidden;
 }
 
@@ -18,27 +18,51 @@ nav li {
 
 nav {
   background-color: rgb(129,126,89);
-  border: 2px solid;
+  border-bottom: 2px solid;
   margin-bottom: 0;
-  position: absolute;
-  padding-left: 0;
+  position: fixed;
   width: 100%;
+  z-index: 10;
+  height: auto;
 }
 
 nav a:link, a:visited {
   display: block;
   width: 120px;
+  font-family: 'Droid Serif', serif;
+  font-size: 1.5em;
   font-weight: bold;
   color: rgb(38,33,29);
   background-color: rgb(129,126,89);
   text-align: center;
-  padding: 4px;
   text-decoration: none;
   text-transform: uppercase;
 }
 
 nav a:hover, a:active {
   background-color: rgb(184,176,152);
+}
+
+.nav__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  display: inline;
+}
+
+#logo {
+  display: block;
+  float: left;
+  width: auto;
+}
+
+h3 {
+  font-style: italic;
+  font-size: 1.5em;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(212,56,56);
 }
 
 footer h3 {
@@ -68,7 +92,7 @@ footer .row {
 .footer {
   border: 2px solid;
   margin-bottom: 0;
-  min-height: 100%;
+  min-height: 50%;
   position: absolute;
   padding-left: 0;
   width: 100%;
@@ -86,11 +110,10 @@ footer .row {
 
 .page-wrap:after {
   /* .push must be the same height as footer */
-  height: 142px;
 }
 .footer {
   background-url: http://api.thumbr.it/whitenoise-361x370.png?background=4ea6caff&noise=626262&density=15&opacity=15;
-  background: rgb(203,184,163);
+  background: rgb(234,219,200);
 }
 
 #inner {
