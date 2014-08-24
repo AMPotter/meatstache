@@ -6,14 +6,14 @@ html, body {
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 nav li {
-    float: right;
+  float: right;
 }
 
 nav {
@@ -26,19 +26,19 @@ nav {
 }
 
 nav a:link, a:visited {
-    display: block;
-    width: 120px;
-    font-weight: bold;
-    color: rgb(38,33,29);
-    background-color: rgb(129,126,89);
-    text-align: center;
-    padding: 4px;
-    text-decoration: none;
-    text-transform: uppercase;
+  display: block;
+  width: 120px;
+  font-weight: bold;
+  color: rgb(38,33,29);
+  background-color: rgb(129,126,89);
+  text-align: center;
+  padding: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 nav a:hover, a:active {
-    background-color: rgb(184,176,152);
+  background-color: rgb(184,176,152);
 }
 
 footer h3 {
@@ -86,7 +86,7 @@ footer .row {
 
 .page-wrap:after {
   /* .push must be the same height as footer */
- height: 142px;
+  height: 142px;
 }
 .footer {
   background-url: http://api.thumbr.it/whitenoise-361x370.png?background=4ea6caff&noise=626262&density=15&opacity=15;
@@ -94,7 +94,7 @@ footer .row {
 }
 
 #inner {
-    width: 50%;
-    margin: 0 auto;
-    font-size: 1.5em;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 1.5em;
 }
