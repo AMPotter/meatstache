@@ -52,6 +52,7 @@ footer .row {
   /* .push must be the same height as footer */
   height: 142px;
 }
+
 .footer {
   background-url: http://api.thumbr.it/whitenoise-361x370.png?background=4ea6caff&noise=626262&density=15&opacity=15;
   background: rgb(203,184,163);
