@@ -6,51 +6,42 @@
     <link rel="stylesheet" type="text/css" href="base.css">
     <link rel="stylesheet" type="text/css" href="layout.css">
     <link rel="stylesheet" type="text/css" href="skeleton.css">
+    <link rel="stylesheet" type="text/css" href="cart.css">
     <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" type="text/css" href="about.css">
     <link rel="stylesheet" type="text/css" href="news.css">
   </head>
   <body>
     <header>
       <nav>
         <div>
-          <div class="logo">
-
-          </div>
+          <div class="logo"></div>
           <h1 class="nav__title">Meatstache</h1>
           <ul class="one-third offset-by-six">
             <li><a href="news.html">News</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.asp">Cart</a></li>
+            <li><a href="cart.html">Cart</a></li>
             <li><a href="index.html">Home</a></li>
           </ul>
         </div>
       </nav>
     </header>
-    <div class="container">
-    	<div class="videoWrapper">
-		    <iframe src="//player.vimeo.com/video/81676577?title=0&amp;byline=0&amp;portrait=0" width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		</div>
+    <div class="shop">
+      <h1>Your Shopping Cart</h1>
+      <ul class="container">
+        <li><div class="offset-by-two four columns">Item Description</div></li>
+        <li><div class="three columns">Price</div></li>
+        <li><div class="three columns">Quantity</div></li>
+        <li><div class="three columns">Total</div></li>
+      </ul>
     </div>
-		<div class="contactdiv" id="social">
-			
-		</div>
-		<h1 class="container">About Us</h1>
-		<div class="container">
-			<p id="abouttext"> Filler text asdfasdnf asbtashdlfka jbskldjbfa; osdihaksj dflaksj dbgalsbfl ak bsfdlkgab jslkdjbal ksbdf glkabs gabk jshdgk ajshb dfjash bdflajhbdf jkahbsdkjfab hskdf bhak jdbhfajk sdhbf</p>
-		</div>
-		<h2 class="container offset-by-two" id="contact">Contact</h2>
-		<div class="container offset-by-two" id="contactform">
-			<input class="info" id="name">
-				<br>
-			<input class="info" id="email">
-				<br>
-			<input class="info" id="subject">
-				<br>
-			<form class="info" id="message">Message:<textarea rows="5" cols="30"></textarea></form>
-				<br>
-			<button id="contact">Send</button>
-		</div>
+    <br>
+    <div class="receipt container">
+      <div class="description offset-by-two four columns">text</div>
+      <div class="price three columns">text</div>
+      <div class="quantity three columns">text</div>
+      <div class="total three columns">text</div>
+    </div>
+    <div class"subtotal">Subtotal</div>
     <footer class="footer">
       <div class="container">
         <div class="row">
@@ -83,8 +74,7 @@
         </div>
       </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="jquery-ui.js"></script>
-    <script type="text/javascript" src="about.js"></script>
   </body>
 </html>
+
+

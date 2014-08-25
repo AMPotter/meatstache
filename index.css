@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+  background-color: rgb(38,33,29);
+}
+
+nav ul {
+  display: inline;
+  list-style-type: none;
+  margin: auto;
+  padding: auto;
+  overflow: hidden;
+}
+
+nav li {
+  padding-top: 1.5em;
+  float: right;
+}
+
+nav {
+  background-color: rgb(129,126,89);
+  border-bottom: 2px solid;
+  margin-bottom: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  /*height: auto;*/
+}
+
+nav a:link, a:visited {
+  display: block;
+  width: 120px;
+  font-family: 'Droid Serif', serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgb(38,33,29);
+  background-color: rgb(129,126,89);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav a:hover, a:active {
+  background-color: rgb(184,176,152);
+}
+
+.nav__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  display: inline;
+}
+
+.logo {
+  content:url(meat.png);
+  display: block;
+  float: left;
+  width: auto;
+}
+
+h3 {
+  font-style: italic;
+  font-size: 1.5em;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(212,56,56);
+}
+
+footer h3 {
+  text-align: center;
+  font-size: 2em;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+footer p {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+footer .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.footer {
+  border: 2px solid;
+  margin-bottom: 0;
+  min-height: 50%;
+  position: absolute;
+  padding-left: 0;
+  width: 100%;
+}
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+.page-wrap:after {
+  /* .push must be the same height as footer */
+}
+
+.footer {
+  background-url: http://api.thumbr.it/whitenoise-361x370.png?background=4ea6caff&noise=626262&density=15&opacity=15;
+  /*The above line is incorrect: what are you attempting to do?  -Jason*/
+  background: rgb(234,219,200);
+}
+
+#inner {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+
+.main-content {
+  background-color: rgb(129,126,89);
+  margin-bottom: 2em;
+}
+
+.product-box {
+  float: left;
+  display: inline;
+
+  margin-left: 2.5em;
+  margin-bottom: 4em;
+  position: relative;
+}
+
+.store {
+  margin-bottom: 6em;
+}
+
+#tabs-1 .product-box {
+  background-image: url(beef-220x220.jpg);
+}
+
+#tabs-2 .product-box {
+  background-image: url(pork-220x220.jpg);
+}
+
+#tabs-3 .product-box {
+  background-image: url(mustache-220x220.jpg);
+}
+
+.product-box__description, .product-box__price {
+  display: inline;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  background-color: rgb(38,33,29);
+}
+
+.product-box__price {
+  right: 0.1em;
+}
+
+.product-box__description {
+  left: 0.1em;
+}
+
+.store__tab-list {
+  background-color: rgb(203,184,163);
+}
+
+.ui-state-default {
+  background-color: rgb(38,33,29);
+}
+
+.ui-state-active {
+  background-color: rgb(129,126,89);
+}
+
+.store__tab-list li a {
+  color: rgb(212,56,0);
+}
+
+.product-box__buy-button {
+  position: absolute;
+  border-radius: 4px;
+  background: #d43800;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0px -1px 0px #882400;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transition-delay: initial;
+}
+

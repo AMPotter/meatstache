@@ -1,0 +1,64 @@
+/* Web Fonts @import */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800);
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
+
+
+/*Color reference:
+$color-1: rgb(129,126,89);
+$color-2: rgb(184,176,152);
+$color-3: rgb(38,33,29);
+$color-4: rgb(203,184,163);
+$color-5: rgb(212,56,56);*/
+
+.news {
+  padding-top: 6em;
+  padding-bottom: 2em;
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgb(129,126,89);
+}
+
+.news__title {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  color: white;
+}
+
+.news__article {
+  background-color: rgb(38,33,29);
+}
+
+.news__article-source {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.6em;
+  color: rgba(255, 255, 255, .95);
+}
+
+.news a {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.news__article-headline {
+  font-style: italic;
+  font-size: 1.5em;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(212,56,56);
+}
+
+.news__article-text {
+  font-family: 'Droid Serif', serif;
+  font-size: 1em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1.5;
+  color: rgb(203,184,163);
+}
