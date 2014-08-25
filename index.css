@@ -20,10 +20,10 @@ nav {
   background-color: rgb(129,126,89);
   border-bottom: 2px solid;
   margin-bottom: 0;
-  /*position: fixed;*/
+  position: fixed;
   width: 100%;
   z-index: 10;
-  height: auto;
+  /*height: auto;*/
 }
 
 nav a:link, a:visited {
@@ -90,7 +90,6 @@ footer .row {
 }
 
 .footer {
-  margin-top: 2em;
   border: 2px solid;
   margin-bottom: 0;
   min-height: 50%;
