@@ -774,7 +774,6 @@ button.ui-button::-moz-focus-inner {
 }
 .ui-tabs {
 	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
-	padding: .2em;
 }
 .ui-tabs .ui-tabs-nav {
 	margin: 0;
@@ -834,13 +833,7 @@ body .ui-tooltip {
 .ui-widget .ui-widget {
 	font-size: 1em;
 }
-.ui-widget input,
-.ui-widget select,
-.ui-widget textarea,
-.ui-widget button {
-	font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
-	font-size: 1em;
-}
+
 .ui-widget-content {
 	color: #333333;
 }
