@@ -1,29 +1,44 @@
 <!DOCTYPE html>
-<html class="container">
-	<link rel="stylesheet" type="text/css" href="base.css">
-	<link rel="stylesheet" type="text/css" href="layout.css">
-	<link rel="stylesheet" type="text/css" href="index.css">
-	<link rel="stylesheet" type="text/css" href="about.css">
-	<link rel="stylesheet" type="text/css" href="test.css">
-	<link rel="stylesheet" type="text/css" href="skeleton.css">
-	<head>
-		<title>Who We Are</title>
-	</head>
-	<header>
+<html>
+  <head>
+    <title>Meatstache</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="base.css">
+    <link rel="stylesheet" type="text/css" href="layout.css">
+    <link rel="stylesheet" type="text/css" href="skeleton.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="about.css">
+    <link rel="stylesheet" type="text/css" href="news.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <div class="logo">
 
-	</header>
-	<body>
-		<iframe class="video" src="//player.vimeo.com/video/81676577?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+          <h1 class="nav__title">Meatstache</h1>
+          <ul class="one-third offset-by-six">
+            <li><a href="news.html">News</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.asp">Cart</a></li>
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+	    <iframe class="video" src="//player.vimeo.com/video/81676577?title=0&amp;byline=0&amp;portrait=0" width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
 		<div class="contactdiv" id="social">
 			
 		</div>
-		<div id="about">
-			<p> Filler text asdfasdnfasbtashdlfkajbskldjbfa;osdihaksjdflaksjdbgalsbflakbsfdlkgabjslkdjbalksbdfglkabsgabkjshdgkajshbdfjashbdflajhbdfjkahbsdkjfabhskdfbhakjdbhfajksdhbf</p>
+		<h1 class="container">About Us</h1>
+		<div class="container">
+			<p> Filler text asdfasdnf asbtashdlfka jbskldjbfa; osdihaksj dflaksj dbgalsbfl ak bsfdlkgab jslkdjbal ksbdf glkabs gabk jshdgk ajshb dfjash bdflajhbdf jkahbsdkjfab hskdf bhak jdbhfajk sdhbf</p>
 		</div>
-		<h2 class="contactdiv" id="contact">Contact</h2>
-		<div class="social">
-		</div>
-		<div class="container" class="six.columns" id="contactform">
+		<h2 class="container offset-by-two" id="contact">Contact</h2>
+		<div class="container offset-by-two" id="contactform">
 			<input class="info" id="name">
 				<br>
 			<input class="info" id="email">
@@ -34,8 +49,37 @@
 				<br>
 			<button id="contact">Send</button>
 		</div>
-		<footer>
-
-		</footer>
-	</body>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <section class="one-third column">
+            <br>
+            <a href="https://maps.google.com/maps?q=47.623561,-122.335948"><img alt="Hq map" class="hq-map" src="https://dgosxlrnzhofi.cloudfront.net/assets/hq-map-0ed65b4aa34d468ed0caf54341ef2994.jpg" style="display: block; max-width: 100%; height: auto;"></a>
+            <address class="hq-address" style="font-size: 1.25em; margin: .5em 0;">
+            511 Boren Ave N. <br>
+            Seattle, Washington 98109
+            </address>
+          </section>
+          <section class="one-third column">
+            <br>
+            <h3>We. Are.</h3>
+            <div style="display: block; max-width: 100%; height: 100%;">
+              <p>Twee asymmetrical salvia single-origin coffee. Polaroid jean shorts skateboard, hashtag ethical Marfa direct trade four loko. Raw denim cray literally mumblecore pork belly squid. Pickled typewriter post-ironic, selvage 3 wolf moon mlkshk. </p>
+            </div>
+          </section>
+          <section class="one-third column">
+            <br>
+            <h3>Connect With Us</h3>
+            <ul id="inner">
+              <li><a href="https://twitter.com/meat_mustache">Twitter</a></li>
+              <li><a href="http://www.facebook.com/">Facebook</a></li>
+              <li><a href="http://www.facebook.com/">Google +</a></li>
+              <li><a href="http://www.facebook.com/">Instagram</a></li>
+              <li><a href="http://www.facebook.com/">Pinterest</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
