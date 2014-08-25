@@ -6,6 +6,7 @@ html, body {
 }
 
 nav ul {
+  display: inline;
   list-style-type: none;
   margin: auto;
   padding: auto;
@@ -13,6 +14,7 @@ nav ul {
 }
 
 nav li {
+  padding-top: 1.5em;
   float: right;
 }
 
@@ -52,7 +54,8 @@ nav a:hover, a:active {
   display: inline;
 }
 
-#logo {
+.logo {
+  content:url(meat.png);
   display: block;
   float: left;
   width: auto;
