@@ -20,7 +20,7 @@ nav {
   background-color: rgb(129,126,89);
   border-bottom: 2px solid;
   margin-bottom: 0;
-  position: fixed;
+  /*position: fixed;*/
   width: 100%;
   z-index: 10;
   height: auto;
@@ -90,6 +90,7 @@ footer .row {
 }
 
 .footer {
+  margin-top: 2em;
   border: 2px solid;
   margin-bottom: 0;
   min-height: 50%;
@@ -111,8 +112,10 @@ footer .row {
 .page-wrap:after {
   /* .push must be the same height as footer */
 }
+
 .footer {
   background-url: http://api.thumbr.it/whitenoise-361x370.png?background=4ea6caff&noise=626262&density=15&opacity=15;
+  /*The above line is incorrect: what are you attempting to do?  -Jason*/
   background: rgb(234,219,200);
 }
 
@@ -120,4 +123,27 @@ footer .row {
   width: 50%;
   margin: 0 auto;
   font-size: 1.5em;
+}
+
+.slider-image-box {
+  background-color: green;
+  height: 200px;
+}
+
+.product-image-box {
+  float: left;
+  display: inline;
+  width: 160px;
+  height: 160px;
+  background-image: url(placeholder-160x160.jpg);
+  margin: 0;
+}
+
+.receipt-area {
+  position: absolute;
+  right: 0;
+  display: inline;
+  width: 320px;
+  height: 640px;
+  background-color: purple;
 }

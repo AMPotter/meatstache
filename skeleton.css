@@ -86,6 +86,20 @@
   margin-bottom: 1em;
 }
 
+.slider-row {
+  margin-top: 3em;
+  margin-left: 120px; /*Overriding offset-by-three in grid*/
+  padding-left: 1em;
+  margin-bottom: 3em;
+}
+
+.store-row {
+  margin-top: 0;
+  margin-left: 60px; /*Overriding offset-by-one in grid*/
+  padding-left: 1em;
+  margin-bottom: 0;
+}
+
 /*End Jason's Tweaks*/
 
 
