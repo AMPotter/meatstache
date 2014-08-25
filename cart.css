@@ -1,0 +1,43 @@
+.shop ul div{
+  color: white;
+  display: inline;
+  border-bottom: 2px solid;
+  margin-top: 2em;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.receipt {
+  border: 2px solid;
+  min-height: 45%;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.description {
+  border: 2px solid;
+  min-height: 45%;
+}
+
+.price {
+  border: 2px solid;
+  min-height: 45%;
+}
+
+.quantity {
+  border: 2px solid;
+  min-height: 45%;
+}
+
+.total {
+  border: 2px solid;
+  min-height: 45%;
+}
+
+.subtotal {
+  border: 2px solid;
+  margin-bottom: 20%;
+  min-height: 15%;
+  width: 70%;
+  margin-left: 25%;
+}
