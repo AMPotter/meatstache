@@ -3,6 +3,7 @@
 }
 html, body {
   height: 100%;
+  background-color: rgb(38,33,29);
 }
 
 nav ul {
@@ -124,25 +125,71 @@ footer .row {
   font-size: 1.5em;
 }
 
-.slider-image-box {
-  background-color: green;
-  height: 200px;
+.main-content {
+  top: 7em;
+  background-color: rgb(129,126,89);
+  margin-bottom: 2em;
 }
 
-.product-image-box {
+.product-box {
   float: left;
   display: inline;
-  width: 160px;
-  height: 160px;
-  background-image: url(placeholder-160x160.jpg);
-  margin: 0;
+  width: 220px;
+  height: 220px;
+  margin-left: 2.5em;
+  margin-bottom: 4em;
+  position: relative;
 }
 
-.receipt-area {
-  position: absolute;
-  right: 0;
-  display: inline;
-  width: 320px;
-  height: 640px;
-  background-color: purple;
+#tabs {
+  width: 960px;
+  margin-bottom: 3em;
 }
+
+#tabs-1 .product-box {
+  background-image: url(beef-220x220.jpg);
+}
+
+#tabs-2 .product-box {
+  background-image: url(pork-220x220.jpg);
+}
+
+#tabs-3 .product-box {
+  background-image: url(mustache-220x220.jpg);
+}
+
+.product-box__description, .product-box__price {
+  display: inline;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  background-color: rgb(38,33,29);
+}
+
+.product-box__price {
+  right: 0;
+}
+
+.product-box__buy-button {
+  position: absolute;
+  bottom: -5em;
+  left: 3.5em;
+}
+
+.store__tab-list {
+  background-color: rgb(203,184,163);
+}
+
+.ui-state-default {
+  background-color: rgb(38,33,29);
+}
+
+.ui-state-active {
+  background-color: rgb(129,126,89);
+}
+
+.store__tab-list li a {
+  color: rgb(212,56,0);
+}
+
