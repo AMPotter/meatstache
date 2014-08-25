@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="cart.css">
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="news.css">
+    <link rel="stylesheet" type="text/css" href="jquery-ui.css">
   </head>
   <body>
     <header>
@@ -25,32 +26,121 @@
         </div>
       </nav>
     </header>
-    <article class="container">
-      <div class="row slider-row">
-        <div class="ten columns slider-image-box">Slider</div>
-      </div>
-    </article>
-    <article class="container">
-      <div class="receipt-area">RECEIPT</div>
-      <div class="row store-row">
-        <div class="product-image-box">product 1</div>
-        <div class="product-image-box">product 2</div>
-        <div class="product-image-box">product 3</div>
-      </div>
-      <div class="row store-row">
-        <div class="product-image-box">product 4</div>
-        <div class="product-image-box">product 5</div>
-        <div class="product-image-box">product 6</div>
-      </div>
-      <div class="row store-row">
-        <div class="product-image-box">product 7</div>
-        <div class="product-image-box">product 8</div>
-        <div class="product-image-box">product 9</div>
-      </div>
-      <div class="row store-row">
-        <div class="product-image-box">product 10</div>
-        <div class="product-image-box">product 11</div>
-        <div class="product-image-box">product 12</div>
+    <article class="container main-content">
+      <div id="tabs" class="store">
+        <ul class="store__tab-list">
+          <li><a href="#tabs-1">Beef</a></li>
+          <li><a href="#tabs-2">Pork</a></li>
+          <li><a href="#tabs-3">Mustache</a></li>
+        </ul>
+        <div id="tabs-1">
+          <div class="row store-row">
+            <div class="product-box">
+              <p class="product-box__description">product 1</p>
+              <p class="product-box__price">$10.99</p>
+              <button class="product-box__buy-button">Add to Cart</button>
+            </div>
+            <div class="product-box">
+              <p class="product-box__description">product 2</p>
+              <p class="product-box__price">$9.99</p>
+              <button class="product-box__buy-button">Add to Cart</button>
+            </div>
+            <div class="product-box">
+              <p class="product-box__description">product 3</p>
+              <p class="product-box__price">$8.99</p>
+              <button class="product-box__buy-button">Add to Cart</button>
+            </div>
+          </div>
+          <div class="row store-row">
+            <div class="product-box">
+              <p class="product-box__description">product 4</p>
+              <p class="product-box__price">$7.99</p>
+              <button class="product-box__buy-button">Add to Cart</button>
+            </div>
+            <div class="product-box">
+              <p class="product-box__description">product 5</p>
+              <p class="product-box__price">$6.99</p>
+              <button class="product-box__buy-button">Add to Cart</button>
+            </div>
+            <div class="product-box">
+              <p class="product-box__description">product 6</p>
+              <p class="product-box__price">$5.99</p>
+              <button class="product-box__buy-button">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div id="tabs-2">
+          <div class="row store-row">
+            <div class="product-box">
+              <p class="product-box__description">product 7</p>
+              <p class="product-box__price">$4.99</p>
+              <button class="product-box__buy-button">Add to Cart</button>
+            </div>
+            <div class="product-box">
+              <p class="product-box__description">product 8</p>
+              <p class="product-box__price">$3.99</p>
+              <button class="product-box__buy-button">Add to Cart</button>
+            </div>
+            <div class="product-box">
+              <p class="product-box__description">product 9</p>
+              <p class="product-box__price">$2.99</p>
+              <button class="product-box__buy-button">Add to Cart</button>
+            </div>
+          </div>
+          <div class="row store-row">
+            <div class="product-box">
+              <p class="product-box__description">product 10</p>
+              <p class="product-box__price">$1.99</p>
+              <button class="product-box__buy-button">Add to Cart</button>
+            </div>
+            <div class="product-box">
+              <p class="product-box__description">product 11</p>
+              <p class="product-box__price">$0.99</p>
+              <button class="product-box__buy-button">Add to Cart</button>
+            </div>
+            <div class="product-box">
+              <p class="product-box__description">product 12</p>
+              <p class="product-box__price">$1.99</p>
+              <button class="product-box__buy-button">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div id="tabs-3">
+          <div class="row store-row">
+            <div class="product-box">
+              <p class="product-box__description">product 13</p>
+              <p class="product-box__price">$2.99</p>
+              <button class="product-box__buy-button">Add to Cart</button>
+            </div>
+            <div class="product-box">
+              <p class="product-box__description">product 14</p>
+              <p class="product-box__price">$3.99</p>
+              <button class="product-box__buy-button">Add to Cart</button>
+            </div>
+            <div class="product-box">
+              <p class="product-box__description">product 15</p>
+              <p class="product-box__price">$4.99</p>
+              <button class="product-box__buy-button">Add to Cart</button>
+            </div>
+          </div>
+          <div class="row store-row">
+            <div class="product-box">
+              <p class="product-box__description">product 16</p>
+              <p class="product-box__price">$5.99</p>
+              <button class="product-box__buy-button">Add to Cart</button>
+            </div>
+            <div class="product-box">
+              <p class="product-box__description">product 17</p>
+              <p class="product-box__price">$6.99</p>
+              <button class="product-box__buy-button">Add to Cart</button>
+            </div>
+            <div class="product-box">
+              <p class="product-box__description">product 18</p>
+              <p class="product-box__price">$7.99</p>
+              <button class="product-box__buy-button">Add to Cart</button>
+            </div>
+          </div>
+        </div>
       </div>
     </article>
     <footer class="footer">
@@ -85,6 +175,9 @@
         </div>
       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="jquery-ui.js"></script>
+    <script type="text/javascript" src="store-widgets.js"></script>
   </body>
 </html>
 
