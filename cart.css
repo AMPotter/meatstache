@@ -1,64 +1,83 @@
 .shop {
-    padding-top: 10%;
+    padding-top: 5%;
 }
 
 .shop h1 {
   text-align: center;
-  padding-bottom: 3%;
+  padding-bottom: 1%;
   font-style: italic;
   font-size: 3.5em;
   font-family: 'Open Sans', sans-serif;
   color: rgb(212,56,56);
 }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  max-width: 75%;
+  margin-left: 12.5%;
+  margin-bottom: 10%;
+}
 
-.shop ul div{
+tr {
+  display: none;
+}
+
+th {
+  background: #333;
   color: white;
-  display: inline;
-  font-size: 1.5em;
+  font-weight: bold;
+}
+
+td, th {
+  padding: 6px;
+  border: 1px solid #ccc;
   text-align: left;
 }
 
-.cart li {
-  display: inline;
-}
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
 
-.receipt {
-  border: 2px solid;
-  min-height: 45%;
-  width: 70%;
-  margin-left: 15%;
-}
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
 
-#description {
-  border-bottom: 2px solid;
-  min-height: 45%;
-  margin-left: 20%;
-}
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
 
-#price {
-  border-bottom: 2px solid;
-  min-height: 45%;
-  margin-left: 12%;
-}
+  tr { border: 1px solid #ccc; }
 
-#quantity {
-  border-bottom: 2px solid;
-  min-height: 45%;
-  margin-left: 12%;
-}
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
 
-#total {
-  border-bottom: 2px solid;
-  min-height: 45%;
-  margin-left: 12%;
-}
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
 
-.subtotal {
-  border: 2px solid;
-  margin-bottom: 20%;
-  min-height: 5%;
-  width: 70%;
-  margin-left: 15%;
+  /*
+  Label the data
+  */
+  td:nth-of-type(1):before { content: "Item Description"; }
+  td:nth-of-type(2):before { content: "Quantity"; }
+  td:nth-of-type(3):before { content: "Price"; }
+  td:nth-of-type(4):before { content: "Total"; }
 }
 
 #checkout {
@@ -67,8 +86,21 @@
   margin-top: .2em;
 }
 
-#subtotal {
-  float: right;
-  margin-right: 5em;
+.nocart {
+  max-width: 400px;
+  height: 400px;
+  background-image: url('http://assets3.thrillist.com/v1/image/302845/size/tl-horizontal_main/your-movember-survival-guide');
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10%;
 }
+
+#cartempty {
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(212,56,56);
+  font-size: 4em;
+  text-align: center;
+}
+
+
 
