@@ -37,7 +37,17 @@
 .subtotal {
   border: 2px solid;
   margin-bottom: 20%;
-  min-height: 15%;
+  min-height: 5%;
   width: 70%;
-  margin-left: 25%;
+  margin-left: 15%;
 }
+
+#checkout {
+  float: right;
+}
+
+#subtotal {
+  float: right;
+
+}
+
