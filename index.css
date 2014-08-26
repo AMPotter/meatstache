@@ -33,7 +33,7 @@ nav a:link, a:visited {
   display: block;
   width: 120px;
   font-family: 'Droid Serif', serif;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: bold;
   color: rgb(38,33,29);
   background-color: rgb(129,126,89);
@@ -129,6 +129,7 @@ footer .row {
 }
 
 .main-content {
+  top: 7em;
   background-color: rgb(129,126,89);
   margin-bottom: 2em;
 }
@@ -136,14 +137,16 @@ footer .row {
 .product-box {
   float: left;
   display: inline;
-
+  width: 220px;
+  height: 220px;
   margin-left: 2.5em;
   margin-bottom: 4em;
   position: relative;
 }
 
-.store {
-  margin-bottom: 6em;
+#tabs {
+  width: 960px;
+  margin-bottom: 3em;
 }
 
 #tabs-1 .product-box {
@@ -168,11 +171,13 @@ footer .row {
 }
 
 .product-box__price {
-  right: 0.1em;
+  right: 0;
 }
 
-.product-box__description {
-  left: 0.1em;
+.product-box__buy-button {
+  position: absolute;
+  bottom: -5em;
+  left: 3.5em;
 }
 
 .store__tab-list {
@@ -189,21 +194,5 @@ footer .row {
 
 .store__tab-list li a {
   color: rgb(212,56,0);
-}
-
-.product-box__buy-button {
-  position: absolute;
-  border-radius: 4px;
-  background: #d43800;
-  text-align: center;
-  text-decoration: none;
-  letter-spacing: 1px;
-  color: white;
-  text-transform: uppercase;
-  text-shadow: 0px -1px 0px #882400;
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: ease;
-  transition-delay: initial;
 }
 
