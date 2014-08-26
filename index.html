@@ -3,6 +3,7 @@
   <head>
     <title>Meatstache</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="base.css">
     <link rel="stylesheet" type="text/css" href="layout.css">
     <link rel="stylesheet" type="text/css" href="skeleton.css">
@@ -12,18 +13,18 @@
     <link rel="stylesheet" type="text/css" href="jquery-ui.css">
   </head>
   <body>
-    <header>
+    <header class="clearfix">
+      <div class="logo">
+        <img src="meat.png">
+        <h1 class="nav__title">Meatstache</h1>
+      </div>
       <nav>
-        <div>
-          <div class="logo"></div>
-          <h1 class="nav__title">Meatstache</h1>
-          <ul>
-            <li><a href="news.html">News</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="index.html">Home</a></li>
-          </ul>
-        </div>
+        <ul>
+          <li><a href="news.html">News</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
       </nav>
     </header>
     <article class="container main-content">
@@ -35,7 +36,7 @@
         </ul>
         <div id="tabs-1">
           <div class="row store-row">
-            <div class="product-box">
+            <div id="0" class="product-box">
               <p class="product-box__description">product 1</p>
               <p class="product-box__price">$10.99</p>
               <button class="product-box__buy-button">Add to Cart</button>
@@ -178,6 +179,7 @@
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="jquery-ui.js"></script>
     <script type="text/javascript" src="store-widgets.js"></script>
+    <script type="text/javascript" src="shop.js"></script>
   </body>
 </html>
 
