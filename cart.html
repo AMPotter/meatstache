@@ -3,6 +3,7 @@
   <head>
     <title>Meatstache</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="base.css">
     <link rel="stylesheet" type="text/css" href="layout.css">
     <link rel="stylesheet" type="text/css" href="skeleton.css">
@@ -11,47 +12,49 @@
     <link rel="stylesheet" type="text/css" href="news.css">
   </head>
   <body>
-    <header>
+    <header class="clearfix">
+      <div class="logo">
+        <img src="meat.png">
+        <h1 class="nav__title">Meatstache</h1>
+      </div>
       <nav>
-        <div>
-          <div class="logo"></div>
-          <h1 class="nav__title">Meatstache</h1>
-          <ul>
-            <li><a href="news.html">News</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="index.html">Home</a></li>
-          </ul>
-        </div>
+        <ul>
+          <li><a href="news.html">News</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
       </nav>
     </header>
-
-
     <div class="shop">
       <h1>Your Shopping Cart</h1>
-      <ul class="cart">
-        <li><div id="description">Item Description</div></li>
-        <li><div id="price">Price</div></li>
-        <li><div id="quantity">Quantity</div></li>
-        <li><div id="total">Total</div></li>
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Item Descritption</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h1 id="cartempty">Cart Empty!</h1>
+      <div class="nocart"></div>
     </div>
-    <div class="receipt">
-      <div class=""></div>
-      <div class=""></div>
-      <div class=""></div>
-      <div class=""></div>
-    </div>
-    <div class="subtotal">
-      <div>
-        <h3 id="subtotal">Subtotal:</h3>
-      </div>
-      <div>
-        <button id="checkout">Checkout</button>
-      </div>
-    </div>
-
-
     <footer class="footer">
       <div class="container">
         <div class="row">
