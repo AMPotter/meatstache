@@ -101,15 +101,21 @@ function Cart() {
     return -1;
   }
 
-  this.addToCart = function (productID, quantity) {
+  this.addToCart = function (productID) {
     //this should run when the "add to cart" button is clicked
     //quantity might always be 1
     //we might be able to pass productID, quantity differently....
     getCartDataFromStorage();
 
+    var quantity = 1;
+
     var index = getIndexOfProduct(productID);
 
     if (index > -1) {  //if we found it
+      if (cartData[index].quantity >= 9) {
+        alert("You cannot buy that many");//maybe replace this with something more elegant
+        return;
+      }
       cartData[index].quantity += quantity; //add the desired quantity of that thing
     } else {        //if it is a new item
       cartData.push({productID: productID, quantity: quantity});
@@ -180,7 +186,7 @@ function Cart() {
 
   this.setQuantity = function (productID, quantity) {
     var index = getIndexOfProduct(productID);//this does getCartDataFromStorage() for us
-    cartData[index].quantity = quantity;
+    cartData[index].quantity = Number(quantity);
     storeCartData();
   }
 
