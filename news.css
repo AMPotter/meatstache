@@ -11,10 +11,11 @@ $color-4: rgb(203,184,163);
 $color-5: rgb(212,56,56);*/
 
 .news {
-  padding-top: 6em;
+  padding-top: 4em;
   padding-bottom: 2em;
   font-family: 'Open Sans', sans-serif;
   background-color: rgb(129,126,89);
+  margin-bottom: 2em;
 }
 
 .news__title {
@@ -24,8 +25,8 @@ $color-5: rgb(212,56,56);*/
   font-weight: bold;
   line-height: 1;
   text-transform: uppercase;
-  letter-spacing: -2px;
   color: white;
+  display: inline;
 }
 
 .news__article {
