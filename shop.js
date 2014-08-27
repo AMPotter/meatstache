@@ -29,6 +29,8 @@ function Products() {
   };
 
   //Maybe methods that let people modify products, etc., if needed
+  //method to fill in the store page??
+  //this.buildStorefront = function () {};
 }
 
 function Cart() {
@@ -53,7 +55,7 @@ function Cart() {
     //quantity might always be 1
     //we might be able to pass productID, quantity differently....
     getCartDataFromStorage();
-    var index = -1;
+    var index = -1; //recreating var index = cartData.indexOf(productID)
     var j;
     for (j = 0; j < cartData.length; j++) {
       if (cartData[j].productID === productID) {
@@ -63,7 +65,7 @@ function Cart() {
     }
 
     if (index > -1) {  //if we found it
-      cartData[index].quantity += quantity; //Increment the quantity of that thing
+      cartData[index].quantity += quantity; //add the desired quantity of that thing
     } else {        //if it is a new item
       cartData.push({productID: productID, quantity: quantity});
     }
