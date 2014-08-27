@@ -1,26 +1,38 @@
 * {
   margin: 0;
 }
+
 html, body {
   height: 100%;
   background-color: rgb(38,33,29);
 }
 
-/*This is for header/nav cleanup*/
-.clearfix:before,
-.clearfix:after {
-    content: "";
-    display: table;
-}
-.clearfix:after {
-    clear: both;
-}
-.clearfix {
-    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
-}
-
 header {
   background-color: rgb(129,126,89);
+}
+
+nav {
+  background-color: rgb(129,126,89);
+  margin-bottom: 0;
+  float: right;
+  width: 50%;
+  z-index: 10;
+  /*height: auto;*/
+}
+
+.logo {
+  display: block;
+  float: left;
+  width: auto;
+}
+
+.nav__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  display: inline;
 }
 
 nav ul {
@@ -34,15 +46,6 @@ nav ul {
 nav li {
   padding-top: 1.5em;
   float: right;
-}
-
-nav {
-  background-color: rgb(129,126,89);
-  margin-bottom: 0;
-  float: right;
-  width: 50%;
-  z-index: 10;
-  /*height: auto;*/
 }
 
 nav a:link, a:visited {
@@ -62,26 +65,21 @@ nav a:hover, a:active {
   background-color: rgb(184,176,152);
 }
 
-.nav__title {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 3em;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: white;
-  display: inline;
-}
-
-.logo {
-  display: block;
-  float: left;
-  width: auto;
-}
-
 h3 {
   font-style: italic;
   font-size: 1.5em;
   font-family: 'Open Sans', sans-serif;
   color: rgb(212,56,56);
+}
+
+.footer {
+  border: 2px solid;
+  margin-bottom: 0;
+  min-height: 50%;
+  position: absolute;
+  padding-left: 0;
+  width: 100%;
+  background: rgb(234,219,200);
 }
 
 footer h3 {
@@ -106,35 +104,6 @@ footer p {
 footer .row {
   margin-left: 0;
   margin-right: 0;
-}
-
-.footer {
-  border: 2px solid;
-  margin-bottom: 0;
-  min-height: 50%;
-  position: absolute;
-  padding-left: 0;
-  width: 100%;
-}
-
-.page-wrap {
-  min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: -142px;
-}
-.page-wrap:after {
-  content: "";
-  display: block;
-}
-
-.page-wrap:after {
-  /* .push must be the same height as footer */
-}
-
-.footer {
-  background-url: http://api.thumbr.it/whitenoise-361x370.png?background=4ea6caff&noise=626262&density=15&opacity=15;
-  /*The above line is incorrect: what are you attempting to do?  -Jason*/
-  background: rgb(234,219,200);
 }
 
 #inner {
@@ -188,6 +157,8 @@ footer .row {
 
 .product-box__description {
   left: 0.1em;
+  font-size: 12pt;
+  line-height: 100%;
 }
 
 .store__tab-list {
@@ -202,8 +173,10 @@ footer .row {
   background-color: rgb(129,126,89);
 }
 
-.store__tab-list li a {
+.store__tab-list li a h1 {
   color: rgb(212,56,0);
+  font-size: 14pt;
+  line-height: 100%;
 }
 
 .product-box__buy-button {
