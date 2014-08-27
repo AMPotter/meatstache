@@ -1,3 +1,7 @@
+/* Web Fonts @import */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800);
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
+
 * {
   margin: 0;
 }
@@ -9,6 +13,8 @@ html, body {
 
 header {
   background-color: rgb(129,126,89);
+  margin-bottom: 2%;
+  line-height: 100%;
 }
 
 nav {
@@ -21,18 +27,21 @@ nav {
 }
 
 .logo {
-  display: block;
   float: left;
   width: auto;
+  vertical-align: center;
 }
 
 .nav__title {
   font-family: 'Open Sans', sans-serif;
   font-size: 3em;
   font-weight: bold;
+  line-height: 1;
   text-transform: uppercase;
   color: white;
   display: inline;
+  vertical-align: top;
+  margin-top: 2em;
 }
 
 nav ul {
@@ -106,10 +115,17 @@ footer .row {
   margin-right: 0;
 }
 
+.hq-address {
+  font-size: 1.25em;
+  margin: .5em 0;
+  text-align: center;
+}
+
 #inner {
   width: 50%;
   margin: 0 auto;
   font-size: 1.5em;
+  text-align: center;
 }
 
 .main-content {
