@@ -71,9 +71,6 @@ function Products() {
     $('#tabs-1 .store-row').eq(0).remove();
     $('#tabs-2 .store-row').eq(0).remove();
     $('#tabs-3 .store-row').eq(0).remove();
-
-
-
   };
 }
 
@@ -94,19 +91,23 @@ function Cart() {
     localStorage.setItem("cartData", data); //probably
   };
 
+  var getIndexOfProduct = function (productID) {
+    var j;
+    for (j = 0; j < cartData.length; j++) {
+      if (cartData[j].productID === productID) {
+        return j;
+      }
+    }
+    return -1;
+  }
+
   this.addToCart = function (productID, quantity) {
     //this should run when the "add to cart" button is clicked
     //quantity might always be 1
     //we might be able to pass productID, quantity differently....
     getCartDataFromStorage();
-    var index = -1; //recreating var index = cartData.indexOf(productID)
-    var j;
-    for (j = 0; j < cartData.length; j++) {
-      if (cartData[j].productID === productID) {
-        index = j;
-        break;
-      }
-    }
+
+    var index = getIndexOfProduct(productID);
 
     if (index > -1) {  //if we found it
       cartData[index].quantity += quantity; //add the desired quantity of that thing
@@ -118,6 +119,14 @@ function Cart() {
 
     console.log(cartData);
   };
+
+  this.clearCart = function () {//adds a placeholder line
+    $newLine = $('.receipt-line').eq(0).clone();
+    $('.receipt-line').remove();
+    $newLine.prependTo('tbody');
+  }
+
+
 
   this.displayCart = function () {
     //This runs when the cart page is loaded
@@ -144,12 +153,15 @@ function Cart() {
       price = productDatabase.getProduct(cartData[i].productID).price;
       subTotal = quantity * price;
       total += subTotal;
-      $newLine.children('.product-name').text(name);
-      $newLine.children('.product-quantity').text(cartData[i].quantity);
+      $newLine.children('.product-name').html(name + '<a>Remove</a>');
+      $newLine.children('.product-quantity').children('select').val(cartData[i].quantity);
       $newLine.children('.product-price').text('$' + price.toFixed(2));
       $newLine.children('.subtotal').text(subTotal.toFixed(2));
+      $newLine.attr('id', cartData[i].productID);
       $newLine.insertAfter('.receipt-line:last');
+
     }
+
     $('.total').text('$' + total.toFixed(2));
     $('#cartempty, .nocart').hide();
     $('.receipt-line').eq(0).remove();
@@ -166,12 +178,18 @@ function Cart() {
     storeCartData();
   };
 
+  this.setQuantity = function (productID, quantity) {
+    var index = getIndexOfProduct(productID);//this does getCartDataFromStorage() for us
+    cartData[index].quantity = quantity;
+    storeCartData();
+  }
+
   this.totalItems = function () {
     getCartDataFromStorage();
     var i;
     var totalItems = 0;
     for (i = 0; i < cartData.length; i++) {
-      totalItems += cartData[i].quantity;
+      totalItems += Number(cartData[i].quantity);
     }
     return totalItems;
   };
