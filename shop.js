@@ -1,9 +1,9 @@
 
-function Product(name, description, price, image) {
+function Product(name, price, image, category) {
   this.name = name;
-  this.description = description;
   this.price = price;
   this.image = image;
+  this.category = category;
   //maybe add a product ID?
   //Maybe a category (beef, pork, mustache) if we want to put it on the correct display tab dynamically
 }
@@ -30,7 +30,9 @@ function Products() {
 
   //Maybe methods that let people modify products, etc., if needed
   //method to fill in the store page??
-  //this.buildStorefront = function () {};
+  this.buildStorefront = function () {
+
+  };
 }
 
 function Cart() {
@@ -121,24 +123,34 @@ function Cart() {
     cartData = [];
     storeCartData();
   };
+
+  this.totalItems = function () {
+    getCartDataFromStorage();
+    var i;
+    var totalItems = 0;
+    for (i = 0; i < cartData.length; i++) {
+      totalItems += cartData[i].quantity;
+    }
+    return totalItems;
+  }
 }
 
 /*build database down here, add stuff that does things*/
 
 var flankSteak = new Product("Carne Asada Flank Steak",
-                            "Perfect for broiling with any of our delicious meat rubs",
                             10.99,
-                            "beef-220x220.jpg");
+                            "beef-220x220.jpg",
+                            "beef");
 
 var bacon = new Product("Housemade Juniper Bacon",
-                            "Eat it for breakfast or any meal",
                             8.99,
-                            "pork-220x220.jpg");
+                            "pork-220x220.jpg",
+                            "pork");
 
 var mustaches = new Product("Fake Mustaches",
-                            "Wear it on your face for that extra flair",
                             5.99,
-                            "mustache-220x220.jpg");
+                            "mustache-220x220.jpg",
+                            "mustache");
 
 var productDatabase = new Products();
 productDatabase.addProduct(flankSteak);
