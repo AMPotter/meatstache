@@ -1,4 +1,7 @@
 $(function() {
+  productDatabase.buildStorefront();
+
+
   $('#tabs').tabs();
 
   $('.product-box').children('p, h1').hide();
@@ -13,6 +16,16 @@ $(function() {
 
   $('.store-row').on('mouseleave', function () {
     $(this).children().children('p, h1').hide('slide', {direction: 'down'}, 250);
+  });
+
+  $('.store').on('click', 'button', function () {
+    var productID = $(this).parent().attr('id');
+    var quantity = 1;
+    console.log("calling add to cart on product " + productID);
+    cart.addToCart(productID, quantity);
+    $(this).text("ADDED. More?").fadeOut(1000, function () {
+      $(this).text("Add to cart").show();
+    });
   });
 
 });
