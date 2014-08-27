@@ -3,61 +3,77 @@
   <head>
     <title>Meatstache</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="base.css">
-    <link rel="stylesheet" type="text/css" href="layout.css">
     <link rel="stylesheet" type="text/css" href="skeleton.css">
     <link rel="stylesheet" type="text/css" href="cart.css">
     <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" type="text/css" href="news.css">
   </head>
   <body>
-    <header>
+    <header class="clearfix">
+      <div class="logo">
+        <img src="meat.png">
+        <h1 class="nav__title">Meatstache</h1>
+      </div>
       <nav>
-        <div>
-          <div class="logo"></div>
-          <h1 class="nav__title">Meatstache</h1>
-          <ul class="one-third offset-by-six">
-            <li><a href="news.html">News</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="index.html">Home</a></li>
-          </ul>
-        </div>
+        <ul>
+          <li><a href="news.html">News</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
       </nav>
     </header>
     <div class="shop">
-      <h1>Your Shopping Cart</h1>
-      <ul class="container">
-        <li><div class="offset-by-two four columns">Item Description</div></li>
-        <li><div class="three columns">Price</div></li>
-        <li><div class="three columns">Quantity</div></li>
-        <li><div class="three columns">Total</div></li>
-      </ul>
+      <h1 class="shop-title">Your Shopping Cart</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Item Descritption</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="receipt-line">
+            <td class="product-name">PDCT</td>
+            <td class="product-quantity">###</td>
+            <td class="product-price">$X.XXX</td>
+            <td class="subtotal">$X.XXX</td>
+          </tr>
+          <tr class="total-line">
+            <td></td>
+            <td></td>
+            <td>Total:</td>
+            <td class="total">$X.XX</td>
+          </tr>
+          <tr class="checkout-line">
+            <td></td>
+            <td></td>
+            <td><button id="empty-cart">Empty Cart</button></td>
+            <td><button id="checkout">Checkout</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <h1 id="cartempty">Cart Empty!</h1>
+      <div class="nocart"></div>
     </div>
-    <br>
-    <div class="receipt container">
-      <div class="description offset-by-two four columns">text</div>
-      <div class="price three columns">text</div>
-      <div class="quantity three columns">text</div>
-      <div class="total three columns">text</div>
-    </div>
-    <div class"subtotal">Subtotal</div>
     <footer class="footer">
       <div class="container">
         <div class="row">
           <section class="one-third column">
             <br>
             <a href="https://maps.google.com/maps?q=47.623561,-122.335948"><img alt="Hq map" class="hq-map" src="https://dgosxlrnzhofi.cloudfront.net/assets/hq-map-0ed65b4aa34d468ed0caf54341ef2994.jpg" style="display: block; max-width: 100%; height: auto;"></a>
-            <address class="hq-address" style="font-size: 1.25em; margin: .5em 0;">
-            511 Boren Ave N. <br>
-            Seattle, Washington 98109
+            <address class="hq-address">
+            511 Boren Ave N. Seattle
             </address>
           </section>
           <section class="one-third column">
             <br>
             <h3>We. Are.</h3>
-            <div style="display: block; max-width: 100%; height: 100%;">
-              <p>Twee asymmetrical salvia single-origin coffee. Polaroid jean shorts skateboard, hashtag ethical Marfa direct trade four loko. Raw denim cray literally mumblecore pork belly squid. Pickled typewriter post-ironic, selvage 3 wolf moon mlkshk. </p>
+            <div>
+              <p>The only grilling/grooming hybrid shop for the young professional who wants to look the best and eat the best. The local dealers in delicious gore. The self-made mustachioed modern men. Organic arbiters of flavor and quality. Your stiff upper lip has never tasted so good. </p>
             </div>
           </section>
           <section class="one-third column">
@@ -74,6 +90,11 @@
         </div>
       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="jquery-ui.js"></script>
+    <script type="text/javascript" src="shop.js"></script>
+    <script type="text/javascript" src="cart-widgets.js"></script>
+    <script type="text/javascript" src="universal-widgets.js"></script>
   </body>
 </html>
 

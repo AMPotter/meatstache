@@ -1,9 +1,44 @@
+/* Web Fonts @import */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800);
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
+
 * {
   margin: 0;
 }
+
 html, body {
-  height: 100%;
   background-color: rgb(38,33,29);
+}
+
+header {
+  background-color: rgb(129,126,89);
+  margin-bottom: 2%;
+}
+
+nav {
+  background-color: rgb(129,126,89);
+  float: right;
+  width: 50%;
+  z-index: 10;
+  /*height: auto;*/
+}
+
+.logo {
+  float: left;
+  width: auto;
+  vertical-align: center;
+}
+
+.nav__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+  color: white;
+  display: inline;
+  vertical-align: top;
+  margin-top: 2em;
 }
 
 nav ul {
@@ -17,16 +52,6 @@ nav ul {
 nav li {
   padding-top: 1.5em;
   float: right;
-}
-
-nav {
-  background-color: rgb(129,126,89);
-  border-bottom: 2px solid;
-  margin-bottom: 0;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-  /*height: auto;*/
 }
 
 nav a:link, a:visited {
@@ -46,27 +71,21 @@ nav a:hover, a:active {
   background-color: rgb(184,176,152);
 }
 
-.nav__title {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 3em;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: white;
-  display: inline;
-}
-
-.logo {
-  content:url(meat.png);
-  display: block;
-  float: left;
-  width: auto;
-}
-
 h3 {
   font-style: italic;
   font-size: 1.5em;
   font-family: 'Open Sans', sans-serif;
   color: rgb(212,56,56);
+}
+
+.footer {
+  border: 2px solid;
+  margin-bottom: 0;
+  min-height: 50%;
+  position: absolute;
+  padding-left: 0;
+  width: 100%;
+  background: rgb(234,219,200);
 }
 
 footer h3 {
@@ -93,44 +112,22 @@ footer .row {
   margin-right: 0;
 }
 
-.footer {
-  border: 2px solid;
-  margin-bottom: 0;
-  min-height: 50%;
-  position: absolute;
-  padding-left: 0;
-  width: 100%;
-}
-
-.page-wrap {
-  min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: -142px;
-}
-.page-wrap:after {
-  content: "";
-  display: block;
-}
-
-.page-wrap:after {
-  /* .push must be the same height as footer */
-}
-
-.footer {
-  background-url: http://api.thumbr.it/whitenoise-361x370.png?background=4ea6caff&noise=626262&density=15&opacity=15;
-  /*The above line is incorrect: what are you attempting to do?  -Jason*/
-  background: rgb(234,219,200);
+.hq-address {
+  font-size: 1.25em;
+  margin: .5em 0;
+  text-align: center;
 }
 
 #inner {
   width: 50%;
   margin: 0 auto;
   font-size: 1.5em;
+  text-align: center;
 }
 
 .main-content {
   background-color: rgb(129,126,89);
-  margin-bottom: 2em;
+  margin-bottom: 10%;
 }
 
 .product-box {
@@ -173,6 +170,10 @@ footer .row {
 
 .product-box__description {
   left: 0.1em;
+  font-size: 12pt;
+  line-height: 100%;
+  width: 65%;
+  text-align: center;
 }
 
 .store__tab-list {
@@ -187,8 +188,10 @@ footer .row {
   background-color: rgb(129,126,89);
 }
 
-.store__tab-list li a {
+.store__tab-list li a h1 {
   color: rgb(212,56,0);
+  font-size: 14pt;
+  line-height: 100%;
 }
 
 .product-box__buy-button {
@@ -207,3 +210,10 @@ footer .row {
   transition-delay: initial;
 }
 
+
+@media screen and (max-width: 767px) {
+  nav {
+    width: 100%;
+    display: block;
+  }
+}
