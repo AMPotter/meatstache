@@ -22,7 +22,7 @@ $(function() {
     var productID = $(this).parent().attr('id');
     var quantity = 1;
     console.log("calling add to cart on product " + productID);
-    cart.addToCart(productID, quantity);
+    cart.addToCart(productID);
     $(this).text("ADDED. More?").fadeOut(1000, function () {
       $(this).text("Add to cart").show();
     });

@@ -16,4 +16,13 @@ $(function () {
     cart.displayCart();
   });
 
+  $('tbody').on('change', 'select', function () {
+    var productID = $(this).parents('.receipt-line').attr('id');
+    console.log(productID);
+    cart.setQuantity(productID, $(this).val());
+    cart.clearCart();
+    cart.displayCart();
+    $('body').trigger('click');
+  });
+
 });
