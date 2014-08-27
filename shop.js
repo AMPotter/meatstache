@@ -180,55 +180,115 @@ function Cart() {
 /*build database down here, initialize other variables*/
 
 var flankSteak = new Product("Carne Asada Flank Steak",
-                            10.99,
-                            "beef-220x220.jpg",
+                            12.50,
+                            "beef-flanksteak.jpg",
                             "beef");
 
-var bacon = new Product("Housemade Juniper Bacon",
-                            8.99,
-                            "pork-220x220.jpg",
+var juniperBacon = new Product("Housemade Juniper Bacon",
+                            9.25,
+                            "pork-juniperbacon.jpg",
                             "pork");
 
-var mustaches = new Product("Fake Mustaches",
+var fakeMustache = new Product("Fake Mustaches",
                             5.99,
-                            "mustache-220x220.jpg",
+                            "stache-fakemustache.jpg",
                             "mustache");
 
-var dummy1 = new Product("Fake Beef 1",
-                            4.99,
-                            "mustache-220x220.jpg",
-                            "beef");
-
-var dummy2 = new Product("Fake Beef 2",
-                            6.50,
-                            "pork-220x220.jpg",
-                            "beef");
-
-var dummy3 = new Product("Fake Beef 3",
-                            7.85,
-                            "beef-220x220.jpg",
-                            "beef");
-
-var dummy4 = new Product("Fake Pork 1",
-                            3.50,
-                            "mustache-220x220.jpg",
+var hogCasing = new Product("Hog Casings",
+                            2.99,
+                            "pork-hogcasings.jpg",
                             "pork");
 
-var dummy5 = new Product("Fake Pork 2",
-                            3.50,
-                            "beef-220x220.jpg",
+var porkTenderloin = new Product("Pork Tenderloin",
+                            9.00,
+                            "pork-tenderloin.jpg",
                             "pork");
+
+var porkRillettes = new Product("Pork Rillettes",
+                            8.00,
+                            "pork-rillettes.jpg",
+                            "pork");
+
+var italianSausage = new Product("Italian Sausage",
+                            7.50,
+                            "pork-italiansausage.jpg",
+                            "pork");
+
+var porkChops = new Product("Pork Chops",
+                            7.25,
+                            "pork-chops.jpg",
+                            "pork");
+
+var ribeyeSteak = new Product("Ribeye",
+                            23.00,
+                            "beef-ribeye.jpg",
+                            "beef");
+
+var groundBeef = new Product("Ground Beef",
+                            7.00,
+                            "beef-ground.jpg",
+                            "beef");
+
+var beefTenderloin = new Product("Beef Tenderloin",
+                            28.00,
+                            "beef-tenderloin.jpg",
+                            "beef");
+
+var skirtSteak = new Product("Skirt Steak",
+                            13.00,
+                            "beef-skirtsteak.jpg",
+                            "beef");
+
+var meatBalls = new Product("Meatballs",
+                            7.75,
+                            "beef-meatballs.jpg",
+                            "beef");
+
+var mustacheComb = new Product("Mustache Comb",
+                            11.25,
+                            "stache-comb.jpg",
+                            "mustache");
+
+var straightRazor = new Product("Straight Razor",
+                            170.00,
+                            "stache-straightrazor.jpg",
+                            "mustache");
+
+var mustacheWax = new Product("Mustache Wax",
+                            8.99,
+                            "stache-wax.jpg",
+                            "mustache");
+
+var mustacheTrimmer = new Product("Mustache Trimmer",
+                            147.99,
+                            "stache-trimmer.jpg",
+                            "mustache");
+
+var beardOil = new Product("Beard Oil",
+                            25.00,
+                            "stache-beardoil.jpg",
+                            "mustache");
 
 
 var productDatabase = new Products();
 productDatabase.addProduct(flankSteak);
-productDatabase.addProduct(bacon);
-productDatabase.addProduct(mustaches);
-productDatabase.addProduct(dummy1);
-productDatabase.addProduct(dummy2);
-productDatabase.addProduct(dummy3);
-productDatabase.addProduct(dummy4);
-productDatabase.addProduct(dummy5);
+productDatabase.addProduct(juniperBacon);
+productDatabase.addProduct(fakeMustache);
+productDatabase.addProduct(hogCasing);
+productDatabase.addProduct(porkTenderloin);
+productDatabase.addProduct(porkRillettes);
+productDatabase.addProduct(italianSausage);
+productDatabase.addProduct(porkChops);
+productDatabase.addProduct(ribeyeSteak);
+productDatabase.addProduct(groundBeef);
+productDatabase.addProduct(beefTenderloin);
+productDatabase.addProduct(skirtSteak);
+productDatabase.addProduct(meatBalls);
+productDatabase.addProduct(mustacheComb);
+productDatabase.addProduct(straightRazor);
+productDatabase.addProduct(mustacheWax);
+productDatabase.addProduct(mustacheTrimmer);
+productDatabase.addProduct(beardOil);
 
 var cart = new Cart();
 
