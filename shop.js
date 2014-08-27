@@ -79,22 +79,47 @@ function Cart() {
     //This runs when the cart page is loaded
     //First finds cart data from local storage
     getCartDataFromStorage();
-    //if cart is empty, display a message
-    //if it's full, fill it in
-    /*PSEUDOCODE DOWN HERE
-    var i;
-    for (i = 0; i < cartData.length; i++) {
-      var $newLine = $('.receipt')[0].clone();
-      $newLine.children('.description')
-        .text(products[cartData[i].productID].name);
-        ETC. for all the child fields
-      $(.recepit-box).append($newLine);//or whatever the syntax is here
+    //if cart is empty, no change; (empty message shows)
+    if (cartData.length === 0) {
+      $('#cartempty, .nocart').show();
+      $('tr').hide();
+      return;
     }
-    */
+    //if it's full, fill it in
+    var i;
+    var $newLine;
+    var name = "";
+    var quantity = 0;
+    var price = 0.0;
+    var subTotal = 0.0;
+    var total = 0.0;
+    for (i = 0; i < cartData.length; i++) {
+      $newLine = $('.receipt-line').eq(0).clone();//the 0th is a template
+      name = productDatabase.getProduct(cartData[i].productID).name;
+      quantity = cartData[i].quantity;
+      price = productDatabase.getProduct(cartData[i].productID).price;
+      subTotal = quantity * price;
+      total += subTotal;
+      $newLine.children('.product-name').text(name);
+      $newLine.children('.product-quantity').text(cartData[i].quantity);
+      $newLine.children('.product-price').text('$' + price);
+      $newLine.children('.subtotal').text(subTotal);
+      $newLine.insertAfter('.receipt-line');
+    }
+    $('.total').text('$' + total);
+    $('#cartempty, .nocart').hide();
+    $('.receipt-line').eq(0).remove();
+    $('.shop-title').show();
+    $('tr').css('display', 'table-row');
   };
 
   this.returnCartData = function () {//this is just for console-line debugging
     return cartData;
+  };
+
+  this.emptyCart = function () {
+    cartData = [];
+    storeCartData();
   };
 }
 
