@@ -61,7 +61,7 @@ function Products() {
 
       $newProductBox = $('.product-box').eq(0).clone();
       $newProductBox.children('.product-box__description').text(product.name);
-      $newProductBox.children('.product-box__price').text('$' + product.price);
+      $newProductBox.children('.product-box__price').text('$' + product.price.toFixed(2));
       $newProductBox.css('background-image', 'url(' + product.image + ')');
       $newProductBox.attr('id', i);
       $('#' + tabID + " .store-row:last").append($newProductBox);
@@ -146,11 +146,11 @@ function Cart() {
       total += subTotal;
       $newLine.children('.product-name').text(name);
       $newLine.children('.product-quantity').text(cartData[i].quantity);
-      $newLine.children('.product-price').text('$' + price);
-      $newLine.children('.subtotal').text(subTotal);
+      $newLine.children('.product-price').text('$' + price.toFixed(2));
+      $newLine.children('.subtotal').text(subTotal.toFixed(2));
       $newLine.insertAfter('.receipt-line:last');
     }
-    $('.total').text('$' + total);
+    $('.total').text('$' + total.toFixed(2));
     $('#cartempty, .nocart').hide();
     $('.receipt-line').eq(0).remove();
     $('.shop-title').show();
@@ -194,10 +194,41 @@ var mustaches = new Product("Fake Mustaches",
                             "mustache-220x220.jpg",
                             "mustache");
 
+var dummy1 = new Product("Fake Beef 1",
+                            4.99,
+                            "mustache-220x220.jpg",
+                            "beef");
+
+var dummy2 = new Product("Fake Beef 2",
+                            6.50,
+                            "pork-220x220.jpg",
+                            "beef");
+
+var dummy3 = new Product("Fake Beef 3",
+                            7.85,
+                            "beef-220x220.jpg",
+                            "beef");
+
+var dummy4 = new Product("Fake Pork 1",
+                            3.50,
+                            "mustache-220x220.jpg",
+                            "pork");
+
+var dummy5 = new Product("Fake Pork 2",
+                            3.50,
+                            "beef-220x220.jpg",
+                            "pork");
+
+
 var productDatabase = new Products();
 productDatabase.addProduct(flankSteak);
 productDatabase.addProduct(bacon);
 productDatabase.addProduct(mustaches);
+productDatabase.addProduct(dummy1);
+productDatabase.addProduct(dummy2);
+productDatabase.addProduct(dummy3);
+productDatabase.addProduct(dummy4);
+productDatabase.addProduct(dummy5);
 
 var cart = new Cart();
 
