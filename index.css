@@ -175,6 +175,8 @@ footer .row {
   left: 0.1em;
   font-size: 12pt;
   line-height: 100%;
+  width: 65%;
+  text-align: center;
 }
 
 .store__tab-list {

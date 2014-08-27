@@ -30,7 +30,49 @@ function Products() {
 
   //Maybe methods that let people modify products, etc., if needed
   //method to fill in the store page??
-  this.buildStorefront = function () {
+  this.buildStorefront = function () {//Assumes at least 1 product in each category
+    var itemsInTabs = [0, 0, 0];
+    var product = {};
+    var i = 0;
+    var tabID = '';
+    var column = 0;
+    var $newProductBox;
+    var $newRow;
+    for (i = 0; i < products.length; i++) {
+      product = products[i];
+      if (product.category === "beef") {
+        tabID = "tabs-1";
+        column = ++itemsInTabs[0];
+      } else if (product.category === "pork") {
+        tabID = "tabs-2";
+        column = ++itemsInTabs[1];
+      } else if (product.category === "mustache") {
+        tabID = "tabs-3";
+        column = ++itemsInTabs[2];
+      } else {
+        alert("Bad item category --- check the database");//should never get here
+      }
+
+      if ((column - 1) % 3 === 0) { //we need a new row
+        $newRow = $('#' + tabID + ' .store-row').eq(0).clone();
+        $newRow.empty();
+        $('#' + tabID).append($newRow);
+      }
+
+      $newProductBox = $('.product-box').eq(0).clone();
+      $newProductBox.children('.product-box__description').text(product.name);
+      $newProductBox.children('.product-box__price').text('$' + product.price);
+      $newProductBox.css('background-image', 'url(' + product.image + ')');
+      $newProductBox.attr('id', i);
+      $('#' + tabID + " .store-row:last").append($newProductBox);
+    }
+
+    //clean up template rows
+    $('#tabs-1 .store-row').eq(0).remove();
+    $('#tabs-2 .store-row').eq(0).remove();
+    $('#tabs-3 .store-row').eq(0).remove();
+
+
 
   };
 }
@@ -106,7 +148,7 @@ function Cart() {
       $newLine.children('.product-quantity').text(cartData[i].quantity);
       $newLine.children('.product-price').text('$' + price);
       $newLine.children('.subtotal').text(subTotal);
-      $newLine.insertAfter('.receipt-line');
+      $newLine.insertAfter('.receipt-line:last');
     }
     $('.total').text('$' + total);
     $('#cartempty, .nocart').hide();
@@ -132,10 +174,10 @@ function Cart() {
       totalItems += cartData[i].quantity;
     }
     return totalItems;
-  }
+  };
 }
 
-/*build database down here, add stuff that does things*/
+/*build database down here, initialize other variables*/
 
 var flankSteak = new Product("Carne Asada Flank Steak",
                             10.99,
@@ -159,12 +201,3 @@ productDatabase.addProduct(mustaches);
 
 var cart = new Cart();
 
-$('.store').on('click', 'button', function () {
-  var productID = $(this).parent().attr('id');
-  var quantity = 1;
-  console.log("calling add to cart on product " + productID);
-  cart.addToCart(productID, quantity);
-  $(this).text("ADDED. More?").fadeOut(1000, function () {
-    $(this).text("Add to cart").show();
-  });
-});
