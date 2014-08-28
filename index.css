@@ -20,7 +20,6 @@ nav {
   float: right;
   width: 50%;
   z-index: 10;
-  /*height: auto;*/
 }
 
 .logo {
@@ -38,7 +37,6 @@ nav {
   color: white;
   display: inline;
   vertical-align: top;
-  margin-top: 2em;
 }
 
 nav ul {
@@ -47,6 +45,7 @@ nav ul {
   margin: auto;
   padding: auto;
   overflow: hidden;
+  font-size: 1em;
 }
 
 nav li {
@@ -56,7 +55,7 @@ nav li {
 
 nav a:link, a:visited {
   display: block;
-  width: 120px;
+  width: 88px;
   font-family: 'Droid Serif', serif;
   font-size: 1.5em;
   font-weight: bold;
@@ -65,6 +64,10 @@ nav a:link, a:visited {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+nav li:nth-of-type(3) a {
+  width: 120px;
 }
 
 nav a:hover, a:active {
@@ -133,9 +136,6 @@ footer .row {
 .product-box {
   float: left;
   display: inline;
-
-  margin-left: 2.5em;
-  margin-bottom: 4em;
   position: relative;
 }
 
@@ -144,15 +144,15 @@ footer .row {
 }
 
 #tabs-1 .product-box {
-  background-image: url(beef-220x220.jpg);
+  background-image: url(beef-flanksteak.jpg);
 }
 
 #tabs-2 .product-box {
-  background-image: url(pork-220x220.jpg);
+  background-image: url(pork-chops.jpg);
 }
 
 #tabs-3 .product-box {
-  background-image: url(mustache-220x220.jpg);
+  background-image: url(stache-comb.jpg);
 }
 
 .product-box__description, .product-box__price {
@@ -210,14 +210,24 @@ footer .row {
   transition-delay: initial;
 }
 
-
-@media screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   nav {
     width: 100%;
     display: block;
   }
 }
 
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  nav {
+    width:100%;
+    /*display: inline-block;*/
+  }
+
+  .logo img {
+    display: none;
+  }
+
+}
 
 /*STUFF FROM JQUERY UI*/
 .ui-tabs {
@@ -299,3 +309,4 @@ footer .row {
 .ui-helper-clearfix {
   min-height: 0; /* support: IE7 */
 }
+

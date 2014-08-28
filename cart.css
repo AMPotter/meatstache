@@ -10,15 +10,13 @@
   font-family: 'Open Sans', sans-serif;
   color: rgb(212,56,56);
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
   max-width: 75%;
   margin-left: 12.5%;
   margin-bottom: 10%;
-}
-
-tr {
   display: none;
 }
 
@@ -34,8 +32,7 @@ td, th {
   text-align: left;
 }
 
-@media
-only screen and (max-width: 760px),
+@media only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
 
   /* Force table to not be like tables anymore */
@@ -76,16 +73,45 @@ only screen and (max-width: 760px),
   /*
   Label the data
   */
-  td:nth-of-type(1):before { content: "Item Description"; }
-  td:nth-of-type(2):before { content: "Quantity"; }
-  td:nth-of-type(3):before { content: "Price"; }
-  td:nth-of-type(4):before { content: "Total"; }
+  .receipt-line td:nth-of-type(1):before { content: "Item Description:"; }
+  .receipt-line td:nth-of-type(2):before { content: "Quantity:"; }
+  .receipt-line td:nth-of-type(3):before { content: "Price:"; }
+  .receipt-line td:nth-of-type(4):before { content: "Total:"; }
+
+  .total-line td:nth-of-type(1) { display: none; }
+  .total-line td:nth-of-type(2) { display: none; }
+  .total-line td:nth-of-type(3) { display: none; }
+  .total-line td:nth-of-type(4):before { content: "Grand Total:"; }
+
+  .checkout-line td:nth-of-type(1) { display: none; }
+  .checkout-line td:nth-of-type(2) { display: none; }
+
+  .checkout-line {
+    border: none;
+    position: relative;
+    margin-bottom: 4em;
+  }
+
+  .checkout-line td {
+    position: absolute;
+    width: 45%;
+    border: none;
+  }
+
+  .checkout-line td:nth-of-type(3) {
+    left: -50%;
+    z-index: 50;
+  }
+
+  .checkout-line td:nth-of-type(4) {
+    right: 0;
+  }
+
+
 }
 
-#checkout {
-  float: right;
-  margin-right: 1em;
-  margin-top: .2em;
+tbody {
+  color: white;
 }
 
 .nocart {
@@ -129,7 +155,10 @@ button {
   transition-duration: 0.2s;
   transition-timing-function: ease;
   transition-delay: initial;
+  float: right;
+  margin: auto;
 }
 
-
-
+select {
+  width: 3em;
+}

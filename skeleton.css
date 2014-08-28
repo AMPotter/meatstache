@@ -89,6 +89,12 @@
 
 /*Tweaks specific to meatstache put down here by Jason */
 
+.news {
+  padding-top: 4em;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+
 
 .news__article {
   margin-left: 180px;  /*skeleton-ish offset-by-three; needs responsiveness*/
@@ -118,6 +124,8 @@
 .product-box {
   width: 220px;
   height: 220px;
+  margin-left: 3em;
+  margin-bottom: 4em;
 }
 
 .product-box__buy-button {
@@ -127,9 +135,6 @@
   font: bold 1.25em/1 "Open Sans", sans-serif;
 }
 
-.main-content {
-  top: 7em;
-}
 
 /*End Jason's Tweaks*/
 
@@ -208,6 +213,7 @@
           .product-box {
             width: 172px;
             height: 172px;
+            margin-left: 2.3em;
           }
 
           .product-box__buy-button {
@@ -219,7 +225,7 @@
           }
 
           .main-content {
-              top: 7em;
+              top: 2em;
           }
           /*End Jason's tweaks */
     }
@@ -274,10 +280,15 @@
 
 
         /*Jason's tweaks*/
+        .news {
+          padding-bottom: 0;
+        }
+
         .news__article {
             border-style: none;
             margin-left: 0px;
             width: 300px;  /*skeleton-ish width: ten columns. */
+            margin-bottom: 0;
         }
         .news__article-image {
             margin-top: 0em;
@@ -293,7 +304,7 @@
         }
 
         .product-box {
-            margin-left: 0;
+            margin-left: 1em;
         }
 
         .product-box__buy-button {
@@ -304,7 +315,7 @@
         }
 
         .main-content {
-              top: 11em;
+              top: 2em;
               padding-bottom: 4em;
           }
         /*End Jason's tweaks*/
@@ -353,6 +364,10 @@
         .store-row {
             width:420px;
             margin: 0;
+        }
+
+        .product-box {
+          margin-left: 5em;
         }
 
         /*End Jason's tweaks*/
