@@ -89,6 +89,12 @@
 
 /*Tweaks specific to meatstache put down here by Jason */
 
+.news {
+  padding-top: 4em;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+
 
 .news__article {
   margin-left: 180px;  /*skeleton-ish offset-by-three; needs responsiveness*/
@@ -274,6 +280,10 @@
 
 
         /*Jason's tweaks*/
+        .news {
+          padding-bottom: 0;
+        }
+
         .news__article {
             border-style: none;
             margin-left: 0px;
