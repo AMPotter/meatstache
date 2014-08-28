@@ -17,9 +17,6 @@ table {
   max-width: 75%;
   margin-left: 12.5%;
   margin-bottom: 10%;
-}
-
-tr {
   display: none;
 }
 
@@ -86,12 +83,6 @@ tbody {
   color: white;
 }
 
-#checkout {
-  float: right;
-  margin-right: 1em;
-  margin-top: .2em;
-}
-
 .nocart {
   max-width: 400px;
   height: 400px;
@@ -133,6 +124,8 @@ button {
   transition-duration: 0.2s;
   transition-timing-function: ease;
   transition-delay: initial;
+  float: right;
+  margin: auto;
 }
 
 select {
