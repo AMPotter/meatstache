@@ -47,4 +47,11 @@
     setTimeout(init, 0);
   });
 
+  $('.contactButton').on('click', function () {
+    $(this).text("Sending").fadeOut(1000, function () {
+      $(this).text("Sent!").show();
+    });
+  });
+
 })(jQuery);
+
