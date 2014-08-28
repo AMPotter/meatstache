@@ -128,8 +128,9 @@ function Cart() {
     $newLine = $('.receipt-line').eq(0).clone();
     $('.receipt-line').remove();
     $newLine.prependTo('tbody');
+    $('.shop-title').hide();
     $('#cartempty, .nocart').show();
-    $('tr').hide();
+    $('table').hide();
   }
 
 
@@ -160,7 +161,7 @@ function Cart() {
       $newLine.children('.product-name').html(name);
       $newLine.children('.product-quantity').children('select').val(cartData[i].quantity);
       $newLine.children('.product-price').text('$' + price.toFixed(2));
-      $newLine.children('.subtotal').text(subTotal.toFixed(2));
+      $newLine.children('.subtotal').text('$' + subTotal.toFixed(2));
       $newLine.attr('id', cartData[i].productID);
       $newLine.insertAfter('.receipt-line:last');
 
@@ -170,7 +171,7 @@ function Cart() {
     $('#cartempty, .nocart').hide();
     $('.receipt-line').eq(0).remove();
     $('.shop-title').show();
-    $('tr').css('display', 'table-row');
+    $('table').css('display', 'table');
   };
 
   this.returnCartData = function () {//this is just for console-line debugging

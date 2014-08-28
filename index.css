@@ -37,7 +37,6 @@ nav {
   color: white;
   display: inline;
   vertical-align: top;
-  margin-top: 2em;
 }
 
 nav ul {
@@ -143,15 +142,15 @@ footer .row {
 }
 
 #tabs-1 .product-box {
-  background-image: url(beef-220x220.jpg);
+  background-image: url(beef-flanksteak.jpg);
 }
 
 #tabs-2 .product-box {
-  background-image: url(pork-220x220.jpg);
+  background-image: url(pork-chops.jpg);
 }
 
 #tabs-3 .product-box {
-  background-image: url(mustache-220x220.jpg);
+  background-image: url(stache-comb.jpg);
 }
 
 .product-box__description, .product-box__price {
@@ -210,7 +209,7 @@ footer .row {
 }
 
 
-@media screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   nav {
     width: 100%;
     display: block;
@@ -219,16 +218,13 @@ footer .row {
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   nav {
     width:100%;
-    display: inline-block;
+    /*display: inline-block;*/
   }
 
   .logo img {
     display: none;
   }
 
-  .nav__title: {
-    float: none;
-  }
 }
 
 
