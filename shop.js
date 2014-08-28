@@ -87,7 +87,6 @@ function Cart() {
 
   var storeCartData = function () {
     var data = JSON.stringify(cartData);
-    console.log(data);
     localStorage.setItem("cartData", data); //probably
   };
 
@@ -123,7 +122,6 @@ function Cart() {
 
     storeCartData();
 
-    console.log(cartData);
   };
 
   this.resetCart = function () {//adds a placeholder line

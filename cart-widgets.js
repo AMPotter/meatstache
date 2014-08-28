@@ -18,10 +18,8 @@ $(function () {
 
   $('tbody').on('change', 'select', function () {
     var productID = $(this).parents('.receipt-line').attr('id');
-    console.log(productID);
     cart.setQuantity(productID, $(this).val());
     cart.resetCart();
-    console.log(cart.returnCartData());
     cart.displayCart();
     $('body').trigger('click');
   });
