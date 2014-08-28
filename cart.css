@@ -139,9 +139,3 @@ button {
 select {
   width: 3em;
 }
-
-.product-name a {
-  float: right;
-  color: rgb(212,56,0);
-}
-

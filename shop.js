@@ -87,7 +87,6 @@ function Cart() {
 
   var storeCartData = function () {
     var data = JSON.stringify(cartData);
-    console.log(data);
     localStorage.setItem("cartData", data); //probably
   };
 
@@ -123,13 +122,14 @@ function Cart() {
 
     storeCartData();
 
-    console.log(cartData);
   };
 
-  this.clearCart = function () {//adds a placeholder line
+  this.resetCart = function () {//adds a placeholder line
     $newLine = $('.receipt-line').eq(0).clone();
     $('.receipt-line').remove();
     $newLine.prependTo('tbody');
+    $('#cartempty, .nocart').show();
+    $('tr').hide();
   }
 
 
@@ -140,8 +140,6 @@ function Cart() {
     getCartDataFromStorage();
     //if cart is empty, no change; (empty message shows)
     if (cartData.length === 0) {
-      $('#cartempty, .nocart').show();
-      $('tr').hide();
       return;
     }
     //if it's full, fill it in
@@ -159,7 +157,7 @@ function Cart() {
       price = productDatabase.getProduct(cartData[i].productID).price;
       subTotal = quantity * price;
       total += subTotal;
-      $newLine.children('.product-name').html(name + '<a>Remove</a>');
+      $newLine.children('.product-name').html(name);
       $newLine.children('.product-quantity').children('select').val(cartData[i].quantity);
       $newLine.children('.product-price').text('$' + price.toFixed(2));
       $newLine.children('.subtotal').text(subTotal.toFixed(2));
@@ -186,7 +184,11 @@ function Cart() {
 
   this.setQuantity = function (productID, quantity) {
     var index = getIndexOfProduct(productID);//this does getCartDataFromStorage() for us
-    cartData[index].quantity = Number(quantity);
+    if (quantity === "0") {
+      cartData.splice(index, 1);
+    } else {
+      cartData[index].quantity = Number(quantity);
+    }
     storeCartData();
   }
 
