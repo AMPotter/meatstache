@@ -118,6 +118,8 @@
 .product-box {
   width: 220px;
   height: 220px;
+  margin-left: 3em;
+  margin-bottom: 4em;
 }
 
 .product-box__buy-button {
@@ -205,6 +207,7 @@
           .product-box {
             width: 172px;
             height: 172px;
+            margin-left: 2.3em;
           }
 
           .product-box__buy-button {
@@ -275,6 +278,7 @@
             border-style: none;
             margin-left: 0px;
             width: 300px;  /*skeleton-ish width: ten columns. */
+            margin-bottom: 0;
         }
         .news__article-image {
             margin-top: 0em;
@@ -290,7 +294,7 @@
         }
 
         .product-box {
-            margin-left: 0;
+            margin-left: 1em;
         }
 
         .product-box__buy-button {
@@ -350,6 +354,10 @@
         .store-row {
             width:420px;
             margin: 0;
+        }
+
+        .product-box {
+          margin-left: 5em;
         }
 
         /*End Jason's tweaks*/
