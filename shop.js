@@ -62,7 +62,7 @@ function Products() {
       $newProductBox = $('.product-box').eq(0).clone();
       $newProductBox.children('.product-box__description').text(product.name);
       $newProductBox.children('.product-box__price').text('$' + product.price.toFixed(2));
-      $newProductBox.css('background-image', 'url(' + product.image + ')');
+      $newProductBox.css('background-image', 'url(images/' + product.image + ')');
       $newProductBox.attr('id', i);
       $('#' + tabID + " .store-row:last").append($newProductBox);
     }
