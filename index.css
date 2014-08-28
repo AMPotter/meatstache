@@ -70,10 +70,6 @@ nav li:nth-of-type(3) a {
   width: 120px;
 }
 
-nav a:link span {
-  color: red;
-}
-
 nav a:hover, a:active {
   background-color: rgb(184,176,152);
 }
