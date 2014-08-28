@@ -140,15 +140,15 @@ footer .row {
 }
 
 #tabs-1 .product-box {
-  background-image: url(beef-flanksteak.jpg);
+  background-image: url(images/beef-flanksteak.jpg);
 }
 
 #tabs-2 .product-box {
-  background-image: url(pork-chops.jpg);
+  background-image: url(images/pork-chops.jpg);
 }
 
 #tabs-3 .product-box {
-  background-image: url(stache-comb.jpg);
+  background-image: url(images/stache-comb.jpg);
 }
 
 .product-box__description, .product-box__price {
