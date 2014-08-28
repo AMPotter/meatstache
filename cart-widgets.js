@@ -1,6 +1,7 @@
 $(function () {
   $('.shop-title').hide();
 
+  cart.resetCart();
   cart.displayCart();
 
   $('#empty-cart').on('click', function () {
