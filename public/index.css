@@ -55,7 +55,7 @@ nav li {
 
 nav a:link, a:visited {
   display: block;
-  width: 88px;
+  width: 87px;
   font-family: 'Droid Serif', serif;
   font-size: 1.5em;
   font-weight: bold;
@@ -222,6 +222,11 @@ footer .row {
   .logo img {
     display: none;
   }
+
+  nav a:link, a:visited {
+  width: 60px;
+  font-size: 1.0em;
+}
 
 }
 
